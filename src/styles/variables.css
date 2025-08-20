@@ -1,0 +1,40 @@
+:root {
+  /* Border radius */
+  --radius-pill: 50px;
+  
+  /* Couleurs de fond */
+  --bg-primary: #f8f9fa;
+  --bg-secondary: rgba(255, 255, 255, 0.95);
+  --bg-tertiary: rgba(0, 0, 0, 0.05);
+  
+  /* Couleurs de texte */
+  --text-primary: #333;
+  --text-secondary: #666;
+  --text-tertiary: #ccc;
+  --text-inverse: #fff;
+  
+  /* Couleurs d'ombre */
+  --shadow-light: 0 8px 32px rgba(0, 0, 0, 0.1);
+  --shadow-dark: 0 8px 32px rgba(0, 0, 0, 0.3);
+  
+  /* Couleurs de bordure */
+  --border-radius: 25px;
+}
+
+/* Mode sombre - switch automatique des couleurs */
+html.dark-mode {
+  /* Couleurs de fond */
+  --bg-primary: #1a1a1a;
+  --bg-secondary: rgba(30, 30, 30, 0.95);
+  --bg-tertiary: rgba(255, 255, 255, 0.1);
+  
+  /* Couleurs de texte */
+  --text-primary: #fff;
+  --text-secondary: #ccc;
+  --text-tertiary: #9ca3af;
+  --text-inverse: #333;
+  
+  /* Couleurs d'ombre */
+  --shadow-light: 0 8px 32px rgba(0, 0, 0, 0.3);
+  --shadow-dark: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
