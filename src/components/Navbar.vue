@@ -195,7 +195,7 @@ onMounted(() => {
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   cursor: pointer;
-  padding: 0.5rem;
+  padding: 0.75rem;
   border-radius: 50%;
   transition: all 0.3s ease;
   color: var(--text-secondary);
