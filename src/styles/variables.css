@@ -1,8 +1,11 @@
 :root {
   /* Border radius */
   --radius-pill: 50px;
-  
+
   /* Couleurs de fond */
+  --background-color: #f8f9fa;
+  
+  /* Couleurs principales */
   --bg-primary: #f8f9fa;
   --bg-secondary: rgba(255, 255, 255, 0.95);
   --bg-tertiary: rgba(0, 0, 0, 0.05);
@@ -23,6 +26,9 @@
 
 /* Mode sombre - switch automatique des couleurs */
 html.dark-mode {
+  /* Couleurs de fond */
+  --background-color: #1a1a1a;
+
   /* Couleurs de fond */
   --bg-primary: #1a1a1a;
   --bg-secondary: rgba(30, 30, 30, 0.95);
