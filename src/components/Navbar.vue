@@ -147,6 +147,18 @@ onMounted(() => {
     inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
+/* Synchroniser la box-shadow avec le glass-slider */
+.nav-item.active {
+  transition: all 0.3s ease;
+}
+
+.nav-item.active:hover {
+  box-shadow: 
+    0 4px 16px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease, box-shadow 0.3s ease 0.1s;
+}
+
 .nav-link {
   text-decoration: none;
   color: var(--text-secondary);
@@ -170,7 +182,7 @@ onMounted(() => {
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: var(--radius-pill);
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.3s ease;
   z-index: 1;
   box-shadow: 
     0 4px 16px rgba(0, 0, 0, 0.1),
