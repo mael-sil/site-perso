@@ -6,9 +6,9 @@
   --background-color: #f8f9fa;
   
   /* Couleurs principales */
-  --bg-primary: #f8f9fa;
-  --bg-secondary: rgba(255, 255, 255, 0.95);
-  --bg-tertiary: rgba(0, 0, 0, 0.05);
+  --primary-color: #deeaf7;
+  --secondary-color: #f8f9fa;
+  --tertiary-color: #e2e8f0;
   
   /* Couleurs de texte */
   --text-primary: #333;
@@ -30,9 +30,9 @@ html.dark-mode {
   --background-color: #1a1a1a;
 
   /* Couleurs de fond */
-  --bg-primary: #1a1a1a;
-  --bg-secondary: rgba(30, 30, 30, 0.95);
-  --bg-tertiary: rgba(255, 255, 255, 0.1);
+  --primary-color: #536474;
+  --secondary-color: rgba(30, 30, 30, 0.95);
+  --tertiary-color: rgba(255, 255, 255, 0.1);
   
   /* Couleurs de texte */
   --text-primary: #fff;

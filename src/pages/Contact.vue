@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="page contact">
+  <div class="page content-padding contact">
     <h1>Contact</h1>
     <p>Me contacter</p>
   </div>
@@ -11,7 +11,6 @@
 
 <style scoped>
 .contact {
-  padding: 2rem;
   text-align: center;
 }
 

@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="page parcours">
+  <div class="page content-padding parcours">
     <h1>Parcours</h1>
     <p>Mon parcours professionnel et formation</p>
   </div>
@@ -11,7 +11,6 @@
 
 <style scoped>
 .parcours {
-  padding: 2rem;
   text-align: center;
 }
 

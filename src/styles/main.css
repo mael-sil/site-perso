@@ -43,7 +43,10 @@ body {
 .main-content {
   width: 100%;
   min-height: 100vh;
-  padding-top: 100px; /* Espace pour la navbar flottante */
+}
+
+.content-padding {
+  padding-top: 120px;
 }
 
 /* Transitions pour le mode sombre */

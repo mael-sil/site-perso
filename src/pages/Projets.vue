@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="page projets">
+  <div class="page content-padding projets">
     <h1>Projets</h1>
     <p>Mes réalisations et projets</p>
   </div>
@@ -11,7 +11,6 @@
 
 <style scoped>
 .projets {
-  padding: 2rem;
   text-align: center;
 }
 
