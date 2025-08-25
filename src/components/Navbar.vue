@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import { ref, onMounted, watch, computed } from 'vue'
+import { ref, onMounted, computed } from 'vue'
 import { useRoute } from 'vue-router'
+import { useThemeStore } from '@/stores/theme'
 import { pages, getPageIndex } from '../utils/pages'
 
 const route = useRoute()
-const isDarkMode = ref(false)
+const themeStore = useThemeStore()
 const isHovering = ref(false)
 
 // Calculer la position de la cellule glass basée sur la route active
@@ -18,28 +19,9 @@ const glassSliderTransform = computed(() => {
   return `translate(${translateX}%, ${translateY}px)`
 })
 
-const toggleDarkMode = () => {
-  isDarkMode.value = !isDarkMode.value
-  updateTheme()
-}
-
-const updateTheme = () => {
-  if (isDarkMode.value) {
-    document.documentElement.classList.add('dark-mode')
-    localStorage.setItem('theme', 'dark')
-  } else {
-    document.documentElement.classList.remove('dark-mode')
-    localStorage.setItem('theme', 'light')
-  }
-}
-
 onMounted(() => {
-  // Récupérer le thème sauvegardé
-  const savedTheme = localStorage.getItem('theme')
-  if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-    isDarkMode.value = true
-    updateTheme()
-  }
+  // Initialiser le thème depuis le store
+  themeStore.initTheme()
 })
 </script>
 
@@ -63,11 +45,11 @@ onMounted(() => {
       
       <div class="navbar-actions">
         <button 
-          @click="toggleDarkMode" 
+          @click="themeStore.toggleTheme" 
           class="theme-toggle"
-          :title="isDarkMode ? 'Passer au mode clair' : 'Passer au mode sombre'"
+          :title="themeStore.isDarkMode ? 'Passer au mode clair' : 'Passer au mode sombre'"
         >
-          <i v-if="isDarkMode" class="fas fa-sun icon"></i>
+          <i v-if="themeStore.isDarkMode" class="fas fa-sun icon"></i>
           <i v-else class="fas fa-moon icon"></i>
         </button>
       </div>

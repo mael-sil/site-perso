@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { computed } from 'vue';
+import { useThemeStore } from '@/stores/theme';
+
 interface FormationStep {
   id: string;
   title: string;
@@ -13,13 +16,24 @@ interface Props {
   step: FormationStep;
 }
 
-defineProps<Props>();
+const props = defineProps<Props>();
+const themeStore = useThemeStore();
+
+// Fonction pour obtenir l'icône dark
+const getDarkIcon = (iconPath: string) => {
+  return iconPath.replace('.svg', '-dark.svg');
+};
+
+// Icône selon le thème
+const currentIcon = computed(() => {
+  return themeStore.isDarkMode ? getDarkIcon(props.step.icon) : props.step.icon;
+});
 </script>
 
 <template>
   <div class="formation-card">
     <div class="card-icon">
-      <img :src="step.icon" :alt="step.title" />
+      <img :src="currentIcon" :alt="step.title" />
     </div>
     <div class="card-content">
       <h3 class="card-title">{{ step.title }}</h3>
@@ -148,9 +162,7 @@ defineProps<Props>();
   border-color: var(--tertiary-color);
 }
 
-.dark-mode .card-icon img {
-  filter: brightness(0.7);
-}
+
 
 /* Responsive design */
 @media (max-width: 768px) {
