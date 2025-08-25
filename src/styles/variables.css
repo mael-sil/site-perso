@@ -11,10 +11,8 @@
   --tertiary-color: #e2e8f0;
   
   /* Couleurs de texte */
-  --text-primary: #333;
-  --text-secondary: #666;
-  --text-tertiary: #ccc;
-  --text-inverse: #fff;
+  --text-primary: #000000;
+  --text-secondary: #1a365d;
   
   /* Couleurs d'ombre */
   --shadow-light: 0 8px 32px rgba(0, 0, 0, 0.1);
@@ -30,15 +28,13 @@ html.dark-mode {
   --background-color: #1a1a1a;
 
   /* Couleurs de fond */
-  --primary-color: #536474;
+  --primary-color: #1a365d;
   --secondary-color: rgba(30, 30, 30, 0.95);
   --tertiary-color: rgba(255, 255, 255, 0.1);
   
   /* Couleurs de texte */
   --text-primary: #fff;
-  --text-secondary: #ccc;
-  --text-tertiary: #9ca3af;
-  --text-inverse: #333;
+  --text-secondary: #afd2f8;
   
   /* Couleurs d'ombre */
   --shadow-light: 0 8px 32px rgba(0, 0, 0, 0.3);
