@@ -8,11 +8,12 @@
     <section class="hero">
       <!-- Bubble Background -->
       <div class="bubbles">
-        <div class="bubble" v-for="n in 20" :key="n" :style="{ 
+        <div class="bubble" v-for="n in 30" :key="n" :style="{ 
           '--index': n, 
           '--total': 20,
           '--size': `${Math.random() * 60 + 30}px`,
-          '--offset': `${Math.random() * 40 - 20}%`
+          '--offset': `${Math.random() * 40 - 20}%`,
+          '--delay': `${Math.random() * 15 + 2}s`
         }"></div>
       </div>
       
@@ -63,6 +64,7 @@
   background: rgba(255, 255, 255, 0.25);
   border-radius: 50%;
   animation: float 12s ease-in-out infinite;
+  animation-delay: var(--delay);
   width: var(--size);
   height: var(--size);
   border: 2px solid rgba(255, 255, 255, 0.4);
@@ -70,7 +72,6 @@
   
   /* Generic positioning with random offset */
   left: calc((var(--index) - 1) * (100% / var(--total)) + var(--offset));
-  animation-delay: calc((var(--index) - 1) * (12s / var(--total)));
   /* Ensure bubbles start off-screen at bottom */
   transform: translateY(100vh) scale(0.8);
   opacity: 0;
