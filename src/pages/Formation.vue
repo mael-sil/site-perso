@@ -98,7 +98,7 @@ const formationSteps: FormationStep[] = [
   top: 0;
   height: 100vh;
   width: 4px;
-  background: var(--primary-color);
+  background: var(--text-secondary);
   transform: translateX(-50%);
   z-index: 1;
 }
@@ -130,7 +130,7 @@ const formationSteps: FormationStep[] = [
   width: 20px;
   height: 20px;
   background: var(--background-color);
-  border: 4px solid var(--primary-color);
+  border: 4px solid var(--text-secondary);
   border-radius: 50%;
   display: flex;
   align-items: center;
