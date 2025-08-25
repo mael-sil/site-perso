@@ -43,13 +43,13 @@ const formationSteps: FormationStep[] = [
 </script>
 
 <template>
-  <div class="page content-padding parcours">
-    <div class="parcours-header">
-      <h1>Mon Parcours</h1>
-      <p>Découvrez mon parcours académique et professionnel</p>
-    </div>
+     <div class="page content-padding formation">
+         <div class="formation-header">
+       <h1>Ma Formation</h1>
+       <p>Découvrez mon parcours académique et professionnel</p>
+     </div>
     
-    <div class="parcours-container">
+         <div class="formation-container">
       <!-- Route verticale avec scroll -->
       <div class="route-container">
         <div class="route-line"></div>
@@ -75,13 +75,13 @@ const formationSteps: FormationStep[] = [
 </template>
 
 <style scoped>
-.parcours {
+.formation {
   min-height: 100vh;
   position: relative;
   overflow: hidden;
 }
 
-.parcours-header {
+.formation-header {
   text-align: center;
   margin-bottom: 3rem;
   z-index: 10;
@@ -102,7 +102,7 @@ const formationSteps: FormationStep[] = [
   margin: 0 auto;
 }
 
-.parcours-container {
+.formation-container {
   position: relative;
   max-width: 1200px;
   margin: 0 auto;

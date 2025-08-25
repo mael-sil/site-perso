@@ -13,9 +13,9 @@ export const pages: PageInfo[] = [
     title: 'Accueil'
   },
   {
-    name: 'Parcours',
-    path: '/parcours',
-    title: 'Parcours'
+    name: 'Formation',
+    path: '/formation',
+    title: 'Formation'
   },
   {
     name: 'Projets',
