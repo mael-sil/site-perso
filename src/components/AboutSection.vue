@@ -1,0 +1,266 @@
+<script setup lang="ts">
+// Composant section À propos
+</script>
+
+<template>
+  <section class="about-section">
+    <div class="about-container">
+      <h2>À propos de moi</h2>
+
+      <div class="about-content">
+        <div class="about-text">
+          <p class="about-intro">
+            Étudiant passionné en informatique, je suis actuellement en BUT informatique à l'IUT
+            Lyon 1 après un parcours enrichissant en physique.
+          </p>
+
+          <p>
+            Mon parcours varié m'a permis de développer une approche analytique et rigoureuse.
+            De la physique à l'informatique, j'ai acquis une
+            solide base en programmation scientifique (Python, C++) avant de me spécialiser dans le
+            développement web fullstack.
+          </p>
+
+          <p>
+            Je suis particulièrement intéressé par le développement fullstack, le DevOps et
+            l'intelligence artificielle.
+          </p>
+          <p>
+            Mon expérience en tant que stagiaire développeur fullstack
+            chez StillDev m'a permis de découvrir le développement informatique en entreprise au
+            sein d'une équipe de 3 développeurs. Dans ce cadre, j'ai travaillé avec Vue.js et
+            FastAPI, tout en découvrant les pratiques DevOps modernes.
+          </p>
+        </div>
+
+        <div class="about-highlights">
+          <div class="highlight-card search-card">
+            <h3>
+              <div class="highlight-icon">🎯</div>
+              Alternance
+            </h3>
+            <p>
+              <strong>Actuellement en recherche d'une alternance d'un an</strong> à partir de
+              septembre 2025 dans le domaine du développement fullstack, avec un rythme d'une
+              semaine en entreprise pour une semaine en formation.
+            </p>
+          </div>
+
+          <div class="highlight-card">
+            <h3>
+              <div class="highlight-icon">🚀</div>
+              Projets
+            </h3>
+            <ul>
+              <li><strong>SudoNano:</strong> Jeu de Sudoku multijoueur compétitif en temps réel</li>
+              <li><strong>JeMultiplie:</strong> Site d'entraînement au calcul mental</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills-overview">
+        <h3>Compétences techniques</h3>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h4>Frontend</h4>
+            <div class="skill-tags">
+              <span>Vue.js</span>
+              <span>HTML/CSS</span>
+              <span>JavaScript</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h4>Backend</h4>
+            <div class="skill-tags">
+              <span>Node.js</span>
+              <span>FastAPI</span>
+              <span>PHP</span>
+              <span>Java</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h4>DevOps & Outils</h4>
+            <div class="skill-tags">
+              <span>Docker</span>
+              <span>Git</span>
+              <span>CI/CD</span>
+              <span>SQL</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
+
+<style scoped>
+.about-section {
+  padding: 4rem 2rem;
+  background-color: var(--background-color);
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-section h2 {
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 5fr 3fr;
+  gap: 4rem;
+  margin-bottom: 3rem;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 1.5rem;
+}
+
+.about-intro {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--primary-color);
+  line-height: 1.6;
+}
+
+.about-text p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.about-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.highlight-icon {
+  font-size: 1.1rem;
+  margin-right: 0.2rem;
+  display: inline-block;
+}
+
+.highlight-card {
+  background: var(--surface-color);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .highlight-card {
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+}
+
+.search-card {
+  background: linear-gradient(135deg, var(--primary-color) 0%, #667eea 100%);
+  color: white;
+  border: none;
+}
+
+.search-card h3,
+.search-card p {
+  color: var(--text-primary) !important;
+}
+
+.highlight-card h3 {
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+}
+
+.highlight-card p,
+.highlight-card ul {
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.highlight-card ul {
+  padding-left: 1.2rem;
+}
+
+.highlight-card li {
+  margin-bottom: 0.5rem;
+}
+
+.skills-overview {
+  margin-top: 3rem;
+}
+
+.skills-overview h3 {
+  color: var(--text-primary);
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.skill-category {
+  background: var(--surface-color);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  text-align: center;
+}
+
+.skill-category h4 {
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.skill-tags span {
+  background: var(--primary-color);
+  color: var(--text-primary);
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+  }
+
+  .about-intro {
+    font-size: 1.2rem;
+  }
+}
+</style>

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 // Page d'accueil
+import AboutSection from '@/components/AboutSection.vue'
 </script>
 
 <template>
@@ -8,33 +9,20 @@
     <section class="hero">
       <!-- Bubble Background -->
       <div class="bubbles">
-        <div class="bubble" v-for="n in 30" :key="n" :style="{ 
-          '--index': n, 
+        <div class="bubble" v-for="n in 30" :key="n" :style="{
+          '--index': n,
           '--total': 30,
           '--size': `${Math.random() * 60 + 30}px`,
           '--offset': `${Math.random() * 40 - 20}%`,
           '--delay': `${Math.random() * 15 + 2}s`
         }"></div>
       </div>
-      
+
       <div class="hero-content">
-        <div class="hero-right">
+        <div class="hero-top">
           <p class="hero-subtitle">Salut, moi c'est</p>
           <h1 class="hero-title">Mael Silvestre-Siaz</h1>
           <p class="hero-subtitle">Étudiant en Informatique — Développeur fullstack</p>
-        </div>
-        <div class="hero-left">
-          <div class="hero-text-container">
-            <p class="hero-text">
-              Étudiant en BUT informatique à l'IUT Lyon 1 après un parcours en physique.
-            </p>
-            <p>
-              Intéressé par le développement fullstack, le DevOps et l'intelligence artificielle.
-            </p>
-            <p class="hero-text">
-              Actuellement en recherche d'une alternance d'un an à partir de septembre 2025.
-            </p>
-          </div>
         </div>
       </div>
       <div class="hero-bottom">
@@ -47,21 +35,18 @@
               <li>Vue.js</li>
               <li>Node.js</li>
               <li>FastAPI</li>
-              
+
             </ul>
             <ul class="hero-tags">
               <li>Docker</li>
               <li>SQL</li>
-              <li>... et plus</li>
+              <li>...</li>
             </ul>
           </div>
     </section>
 
     <!-- Main Content -->
-    <section class="main-content">
-      <h2>À propos</h2>
-      <p>Bienvenue sur mon site CV</p>
-    </section>
+    <AboutSection />
   </div>
 </template>
 
@@ -104,7 +89,7 @@
   height: var(--size);
   border: 2px solid rgba(255, 255, 255, 0.4);
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
-  
+
   /* Generic positioning with random offset */
   left: calc((var(--index) - 1) * (100% / var(--total)) + var(--offset));
   /* Ensure bubbles start off-screen at bottom */
@@ -181,6 +166,10 @@
   margin-top: 0.5rem;
 }
 
+.hero-actions .btn {
+  z-index: 2;
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -217,6 +206,11 @@
   font-size: 0.9rem;
 }
 
+.dark-mode .hero-tags li {
+  color: var(--text-primary);
+}
+
+
 /* Main Content */
 .main-content {
   padding: 4rem 2rem;
@@ -251,21 +245,20 @@
   .hero-title {
     font-size: 2.5rem;
   }
-  
   .hero-subtitle {
     font-size: 1.2rem;
   }
-  
+
   .hero-actions {
     flex-direction: column;
     align-items: center;
   }
-  
+
   .btn {
     width: 100%;
     max-width: 300px;
   }
-  
+
   .bubble {
     width: calc(var(--size) * 0.8);
     height: calc(var(--size) * 0.8);
