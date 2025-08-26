@@ -18,8 +18,43 @@
       </div>
       
       <div class="hero-content">
-        <h1 class="hero-title">Bienvenue sur mon Portfolio</h1>
+        <div class="hero-right">
+          <p class="hero-subtitle">Salut, moi c'est</p>
+          <h1 class="hero-title">Mael Silvestre-Siaz</h1>
+          <p class="hero-subtitle">Étudiant en Informatique — Développeur fullstack</p>
+        </div>
+        <div class="hero-left">
+          <div class="hero-text-container">
+            <p class="hero-text">
+              Étudiant en BUT informatique à l'IUT Lyon 1 après un parcours en physique.
+            </p>
+            <p>
+              Intéressé par le développement fullstack, le DevOps et l'intelligence artificielle.
+            </p>
+            <p class="hero-text">
+              Actuellement en recherche d'une alternance d'un an à partir de septembre 2025.
+            </p>
+          </div>
+        </div>
       </div>
+      <div class="hero-bottom">
+            <div class="hero-actions">
+              <RouterLink to="/projets" class="btn btn-primary">Voir mes projets</RouterLink>
+              <RouterLink to="/contact" class="btn btn-secondary">Me contacter</RouterLink>
+              <a class="btn btn-ghost" href="https://github.com/mael-sil" target="_blank" rel="noopener">GitHub</a>
+            </div>
+            <ul class="hero-tags">
+              <li>Vue.js</li>
+              <li>Node.js</li>
+              <li>FastAPI</li>
+              
+            </ul>
+            <ul class="hero-tags">
+              <li>Docker</li>
+              <li>SQL</li>
+              <li>... et plus</li>
+            </ul>
+          </div>
     </section>
 
     <!-- Main Content -->
@@ -38,15 +73,15 @@
 /* Hero Section */
 .hero {
   background: linear-gradient(135deg, var(--primary-color) 0%, #667eea 100%);
-  height: 600px;
+  height: 700px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  text-align: center;
+  justify-content: space-around;
   padding: 4rem 2rem;
   padding-top: 120px;
   position: relative;
   overflow: hidden;
+  flex-direction: column;
 }
 
 /* Bubble Background - Generic System with Randomness */
@@ -95,18 +130,91 @@
 }
 
 .hero-content {
-  max-width: 800px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 2rem;
   position: relative;
   z-index: 2;
+  width: 100%;
 }
 
 .hero-title {
   font-size: 3.5rem;
   font-weight: 700;
   color: var(--text-secondary);
-  margin-bottom: 1.5rem;
   line-height: 1.2;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hero-subtitle {
+  color: var(--text-secondary);
+  font-size: 1.25rem;
+  opacity: 0.95;
+  margin-bottom: 1rem;
+}
+
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.hero-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.hero-text {
+  color: var(--text-primary);
+  max-width: 820px;
+  margin: 0 auto 1.75rem auto;
+  line-height: 1.6;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.25rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.15s ease, filter 0.15s ease, background 0.15s ease;
+  color: #ffffff;
+}
+
+.btn:hover { transform: translateY(-2px); filter: brightness(1.05); }
+
+.btn-primary { background: #111827; }
+.btn-secondary { background: rgba(255, 255, 255, 0.15); border: 1px solid rgba(255, 255, 255, 0.35); }
+.btn-ghost { background: transparent; border: 1px dashed rgba(255, 255, 255, 0.4); }
+
+.hero-tags {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1.25rem;
+}
+
+.hero-tags li {
+  list-style: none;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
 }
 
 /* Main Content */
@@ -131,6 +239,15 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-left {
+    align-items: center;
+  }
+
   .hero-title {
     font-size: 2.5rem;
   }
