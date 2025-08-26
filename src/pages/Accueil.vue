@@ -10,7 +10,7 @@
       <div class="bubbles">
         <div class="bubble" v-for="n in 30" :key="n" :style="{ 
           '--index': n, 
-          '--total': 20,
+          '--total': 30,
           '--size': `${Math.random() * 60 + 30}px`,
           '--offset': `${Math.random() * 40 - 20}%`,
           '--delay': `${Math.random() * 15 + 2}s`
@@ -64,7 +64,7 @@
   background: rgba(255, 255, 255, 0.25);
   border-radius: 50%;
   animation: float 12s ease-in-out infinite;
-  animation-delay: var(--delay);
+  animation-delay: calc(var(--delay) * -1);
   width: var(--size);
   height: var(--size);
   border: 2px solid rgba(255, 255, 255, 0.4);
