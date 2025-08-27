@@ -32,15 +32,15 @@ import AboutSection from '@/components/AboutSection.vue'
               <a class="btn btn-ghost" href="https://github.com/mael-sil" target="_blank" rel="noopener">GitHub</a>
             </div>
             <ul class="hero-tags">
-              <li>Vue.js</li>
-              <li>Node.js</li>
-              <li>FastAPI</li>
+              <li class="tag-primary">Vue.js</li>
+              <li class="tag-primary">Node.js</li>
+              <li class="tag-primary">FastAPI</li>
 
             </ul>
             <ul class="hero-tags">
-              <li>Docker</li>
-              <li>SQL</li>
-              <li>...</li>
+              <li class="tag-primary">Docker</li>
+              <li class="tag-primary">SQL</li>
+              <li class="tag-primary">...</li>
             </ul>
           </div>
     </section>
@@ -195,21 +195,6 @@ import AboutSection from '@/components/AboutSection.vue'
   flex-wrap: wrap;
   margin-top: 1.25rem;
 }
-
-.hero-tags li {
-  list-style: none;
-  padding: 0.35rem 0.65rem;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.18);
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  color: var(--text-secondary);
-  font-size: 0.9rem;
-}
-
-.dark-mode .hero-tags li {
-  color: var(--text-primary);
-}
-
 
 /* Main Content */
 .main-content {

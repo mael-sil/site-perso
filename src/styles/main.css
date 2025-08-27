@@ -60,3 +60,15 @@ body {
   border: none;
   outline: none;
 }
+
+
+.tag-primary {
+  list-style: none;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  backdrop-filter: blur(20px);
+}

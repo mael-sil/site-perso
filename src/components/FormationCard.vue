@@ -30,7 +30,7 @@ defineProps<Props>();
         <span
           v-for="skill in step.skills"
           :key="skill"
-          class="skill-tag"
+          class="tag-primary"
         >
           {{ skill }}
         </span>
@@ -126,25 +126,9 @@ defineProps<Props>();
   gap: 0.5rem;
 }
 
-.skill-tag {
-  background: var(--primary-color);
-  color: var(--text-primary);
-  padding: 0.4rem 0.8rem;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 500;
-  border: 1px solid var(--tertiary-color);
-}
-
 /* Mode sombre */
 .dark-mode .formation-card {
   background: linear-gradient(135deg, var(--primary-color) 0%, #667eea 100%);
-}
-
-.dark-mode .skill-tag {
-  background: var(--primary-color);
-  color: var(--text-inverse);
-  border-color: var(--tertiary-color);
 }
 
 
