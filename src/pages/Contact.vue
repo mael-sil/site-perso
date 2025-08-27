@@ -156,9 +156,10 @@ h1 {
   transform: translateY(-2px);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1030px) {
   .contact {
     padding: 2rem 1rem;
+    padding-top: calc(120px + 2rem);
   }
 
   h1 {

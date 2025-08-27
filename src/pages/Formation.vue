@@ -48,10 +48,10 @@ const formationSteps: FormationStep[] = [
       <!-- Route verticale avec scroll -->
       <div class="route-container">
         <div class="route-line"></div>
-        
+
         <!-- Étapes de formation avec route -->
-        <div 
-          v-for="(step, index) in formationSteps" 
+        <div
+          v-for="(step, index) in formationSteps"
           :key="step.id"
           :class="['formation-step', `step-${index + 1}`]"
           :data-step="step.id"
@@ -60,7 +60,7 @@ const formationSteps: FormationStep[] = [
           <div class="route-point">
             <div class="point-inner"></div>
           </div>
-          
+
           <!-- Carte de formation -->
           <FormationCard :step="step" />
         </div>
@@ -175,22 +175,26 @@ const formationSteps: FormationStep[] = [
   .parcours-header h1 {
     font-size: 2rem;
   }
-  
+
   .formation-step {
     flex-direction: column !important;
     text-align: center;
     margin-bottom: 3rem;
   }
-  
 
-  
+  .formation-container {
+    padding: 0;
+  }
+
+
+
   .route-line {
-    left: 20px;
+    left: 2rem;
     top: 0;
   }
-  
+
   .route-point {
-    left: 20px;
+    left: 0;
   }
 }
 

@@ -245,6 +245,7 @@ const projects: Project[] = [
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
+  width: 100%;
 }
 
 .project-content-text {
