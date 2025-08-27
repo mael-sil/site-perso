@@ -1,5 +1,62 @@
 <script setup lang="ts">
 // Composant section À propos
+
+const skillsData = {
+  "categories": [
+    {
+      "id": "frontend",
+      "title": "Frontend",
+      "skills": [
+        "Vue.js",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "TypeScript",
+        "WebSocket"
+      ]
+    },
+    {
+      "id": "backend",
+      "title": "Backend",
+      "skills": [
+        "Node.js",
+        "Express.js",
+        "Socket.io",
+        "FastAPI",
+        "PHP",
+        "Java",
+        "Python",
+        "C++"
+      ]
+    },
+    {
+      "id": "devops",
+      "title": "DevOps & Outils",
+      "skills": [
+        "Docker",
+        "Git",
+        "GitHub",
+        "GitLab",
+        "CI/CD",
+        "SQL",
+        "MySQL",
+        "UML"
+      ]
+    },
+    {
+      "id": "scientific",
+      "title": "Programmation Scientifique",
+      "skills": [
+        "NumPy",
+        "Matplotlib",
+        "Pandas",
+        "PyTorch",
+        "Matlab",
+        "Machine Learning"
+      ]
+    }
+  ]
+}
 </script>
 
 <template>
@@ -62,32 +119,20 @@
       <div class="skills-overview">
         <h3>Compétences techniques</h3>
         <div class="skills-grid">
-          <div class="skill-category">
-            <h4>Frontend</h4>
+          <div
+            v-for="category in skillsData.categories"
+            :key="category.id"
+            class="skill-category"
+          >
+            <h4>{{ category.title }}</h4>
             <div class="skill-tags">
-              <span>Vue.js</span>
-              <span>HTML/CSS</span>
-              <span>JavaScript</span>
-            </div>
-          </div>
-
-          <div class="skill-category">
-            <h4>Backend</h4>
-            <div class="skill-tags">
-              <span>Node.js</span>
-              <span>FastAPI</span>
-              <span>PHP</span>
-              <span>Java</span>
-            </div>
-          </div>
-
-          <div class="skill-category">
-            <h4>DevOps & Outils</h4>
-            <div class="skill-tags">
-              <span>Docker</span>
-              <span>Git</span>
-              <span>CI/CD</span>
-              <span>SQL</span>
+              <span
+                v-for="skill in category.skills"
+                :key="skill"
+                class="tag-primary"
+              >
+                {{ skill }}
+              </span>
             </div>
           </div>
         </div>
@@ -219,20 +264,25 @@
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
 }
 
 .skill-category {
-  background: var(--surface-color);
+  background: linear-gradient(135deg, var(--primary-color) 0%, #667eea 100%);
   padding: 1.5rem;
   border-radius: 12px;
-  border: 1px solid var(--border-color);
+  border: none;
   text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .skill-category h4 {
-  color: var(--text-primary);
+  color: white;
   margin-bottom: 1rem;
   font-size: 1.2rem;
 }
@@ -244,13 +294,10 @@
   justify-content: center;
 }
 
-.skill-tags span {
-  background: var(--primary-color);
-  color: var(--text-primary);
-  padding: 0.4rem 0.8rem;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  font-weight: 500;
+@media (max-width: 1030px) and (min-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* Responsive Design */
