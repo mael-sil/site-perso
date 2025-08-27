@@ -7,7 +7,7 @@
     <div class="about-container">
       <h2>À propos de moi</h2>
 
-      <div class="about-content">
+            <div class="about-content">
         <div class="about-text">
           <p class="about-intro">
             Étudiant passionné en informatique, je suis actuellement en BUT informatique à l'IUT
@@ -115,10 +115,17 @@
 }
 
 .about-content {
-  display: grid;
-  grid-template-columns: 5fr 3fr;
+  display: flex;
   gap: 4rem;
   margin-bottom: 3rem;
+}
+
+.about-text {
+  flex: 5;
+}
+
+.about-highlights {
+  flex: 3;
 }
 
 .about-text {
@@ -141,6 +148,8 @@
   line-height: 1.7;
   margin: 0;
 }
+
+
 
 .about-highlights {
   display: flex;
@@ -247,8 +256,16 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .about-content {
-    grid-template-columns: 1fr;
+    flex-direction: column;
     gap: 2rem;
+  }
+
+  .about-text {
+    order: 2;
+  }
+
+  .about-highlights {
+    order: 1;
   }
 
   .skills-grid {

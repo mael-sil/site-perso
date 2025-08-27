@@ -21,7 +21,7 @@ import AboutSection from '@/components/AboutSection.vue'
       <div class="hero-content">
         <div class="hero-top">
           <p class="hero-subtitle">Salut, moi c'est</p>
-          <h1 class="hero-title">Mael Silvestre-Siaz</h1>
+          <h1 class="hero-title">Mael Silvestre&#8209;Siaz</h1>
           <p class="hero-subtitle">Étudiant en Informatique — Développeur fullstack</p>
         </div>
       </div>
