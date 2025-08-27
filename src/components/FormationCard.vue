@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import { computed } from 'vue';
-import { useThemeStore } from '@/stores/theme';
-
 interface FormationStep {
   id: string;
   title: string;
@@ -16,24 +13,13 @@ interface Props {
   step: FormationStep;
 }
 
-const props = defineProps<Props>();
-const themeStore = useThemeStore();
-
-// Fonction pour obtenir l'icône dark
-const getDarkIcon = (iconPath: string) => {
-  return iconPath.replace('.svg', '-dark.svg');
-};
-
-// Icône selon le thème
-const currentIcon = computed(() => {
-  return themeStore.isDarkMode ? getDarkIcon(props.step.icon) : props.step.icon;
-});
+defineProps<Props>();
 </script>
 
 <template>
   <div class="formation-card">
     <div class="card-icon">
-      <img :src="currentIcon" :alt="step.title" />
+      <img :src="step.icon" :alt="step.title" />
     </div>
     <div class="card-content">
       <h3 class="card-title">{{ step.title }}</h3>
@@ -41,9 +27,9 @@ const currentIcon = computed(() => {
       <p class="card-period">{{ step.period }}</p>
       <p class="card-description">{{ step.description }}</p>
       <div class="card-skills">
-        <span 
-          v-for="skill in step.skills" 
-          :key="skill" 
+        <span
+          v-for="skill in step.skills"
+          :key="skill"
           class="skill-tag"
         >
           {{ skill }}
@@ -55,7 +41,7 @@ const currentIcon = computed(() => {
 
 <style scoped>
 .formation-card {
-  background: var(--background-color);
+  background: linear-gradient(135deg, var(--primary-color) 0%, #667eea 100%);
   border: 2px solid var(--primary-color);
   border-radius: var(--border-radius);
   padding: 2rem;
@@ -74,7 +60,7 @@ const currentIcon = computed(() => {
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  background: var(--text-secondary);
   transform: scaleX(0);
   transition: transform 0.3s ease;
 }
@@ -86,7 +72,7 @@ const currentIcon = computed(() => {
 .formation-card:hover {
   transform: translateY(-8px);
   box-shadow: var(--shadow-dark);
-  border-color: var(--secondary-color);
+  border: 2px solid var(--text-secondary);
 }
 
 .card-icon {
@@ -152,8 +138,7 @@ const currentIcon = computed(() => {
 
 /* Mode sombre */
 .dark-mode .formation-card {
-  background: var(--secondary-color);
-  border-color: var(--primary-color);
+  background: linear-gradient(135deg, var(--primary-color) 0%, #667eea 100%);
 }
 
 .dark-mode .skill-tag {
