@@ -19,7 +19,7 @@ const formationSteps: FormationStep[] = [
     period: '2020 - 2023',
     description: 'Formation en physique fondamentale avec acquisition de compétences en programmation C++ et méthodes scientifiques.',
     skills: ['Physique', 'Mathématiques', 'C++', 'Python', 'LaTeX'],
-    icon: '/book.svg'
+    icon: './book.svg'
   },
   {
     id: 'epfl',
@@ -28,7 +28,7 @@ const formationSteps: FormationStep[] = [
     period: '2023 - 2024',
     description: '18 ECTS validés, notamment en machine learning, avant une réorientation vers une formation informatique.',
     skills: ['Machine Learning', 'Deep Learning', 'Python', 'PyTorch'],
-    icon: '/atom.svg'
+    icon: './atom.svg'
   },
   {
     id: 'iut-lyon1',
@@ -37,7 +37,7 @@ const formationSteps: FormationStep[] = [
     period: '2024 - en cours',
     description: 'BUT en année spéciale combinant les deux premières années en une seule.',
     skills: ['Java', 'Vue.js', 'JavaScript', 'TypeScript', 'PHP', 'SQL', 'Git', 'Docker', 'Linux'],
-    icon: '/computer.svg'
+    icon: './computer.svg'
   }
 ];
 </script>

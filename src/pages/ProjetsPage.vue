@@ -25,7 +25,7 @@ const projects: Project[] = [
     technologies: ['Vue.js', 'Node.js', 'Socket.io', 'JavaScript', 'HTML/CSS'],
     type: 'group',
     status: 'in-progress',
-    icon: '/alien.svg'
+    icon: './alien.svg'
   },
   {
     id: 'jemultiplie',
@@ -36,7 +36,7 @@ const projects: Project[] = [
     technologies: ['Vue.js', 'JavaScript', 'HTML/CSS', 'GitHub'],
     type: 'personal',
     status: 'in-progress',
-    icon: '/cross.svg'
+    icon: './cross.svg'
   }
 ];
 </script>
