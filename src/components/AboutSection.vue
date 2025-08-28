@@ -93,7 +93,7 @@ const skillsData = {
         <div class="about-highlights">
           <div class="highlight-card search-card">
             <h3>
-              <div class="highlight-icon">🎯</div>
+              <img src="/bullseye.svg" alt="bullseye" width="25" height="25">
               Alternance
             </h3>
             <p>
@@ -103,14 +103,14 @@ const skillsData = {
             </p>
           </div>
 
-          <div class="highlight-card">
+          <div class="highlight-card experience-card">
             <h3>
-              <div class="highlight-icon">🚀</div>
-              Projets
+              <img src="/briefcase.svg" alt="briefcase" width="25" height="25">
+              Expérience Professionnelle
             </h3>
             <ul>
-              <li><strong>SudoNano:</strong> Jeu de Sudoku multijoueur compétitif en temps réel</li>
-              <li><strong>JeMultiplie:</strong> Site d'entraînement au calcul mental</li>
+              <li><strong>StillDev (2025, 3 mois) :</strong> Stage développeur fullstack - Vue.js, FastAPI, Docker</li>
+              <li><strong>Freelance (Depuis 2025) :</strong> Développement web et applications notamment pour StillDev</li>
             </ul>
           </div>
         </div>
@@ -234,6 +234,9 @@ const skillsData = {
   color: var(--text-primary);
   margin-bottom: 0.75rem;
   font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .highlight-card p,
