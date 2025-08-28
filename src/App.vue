@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { onMounted } from 'vue'
 import { useThemeStore } from '@/stores/theme'
-import Navbar from './components/Navbar.vue'
+import NavBar from './components/NavBar.vue'
 
 const themeStore = useThemeStore()
 
@@ -15,7 +15,7 @@ onMounted(() => {
     <main class="main-content">
       <router-view />
     </main>
-    <Navbar />
+    <NavBar />
   </div>
 </template>
 
