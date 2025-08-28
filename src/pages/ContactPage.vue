@@ -27,7 +27,7 @@
         </div>
         <h3>LinkedIn</h3>
         <p>Connectons-nous professionnellement</p>
-        <a href="www.linkedin.com/in/mael-silvestre-siaz" target="_blank" rel="noopener noreferrer" class="contact-link">
+        <a href="https://www.linkedin.com/in/mael-silvestre-siaz" target="_blank" rel="noopener noreferrer" class="contact-link">
           Voir mon profil
         </a>
       </div>
@@ -39,7 +39,7 @@
         <h3>GitHub</h3>
         <p>Découvrez mes projets</p>
         <a href="https://github.com/mael-sil" target="_blank" rel="noopener noreferrer" class="contact-link">
-          Voir mes repos
+          Voir mon GitHub
         </a>
       </div>
     </div>
