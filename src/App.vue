@@ -2,6 +2,7 @@
 import { onMounted } from 'vue'
 import { useThemeStore } from '@/stores/theme'
 import NavBar from './components/NavBar.vue'
+import SiteFooter from './components/SiteFooter.vue'
 
 const themeStore = useThemeStore()
 
@@ -16,6 +17,7 @@ onMounted(() => {
       <router-view />
     </main>
     <NavBar />
+    <SiteFooter />
   </div>
 </template>
 
