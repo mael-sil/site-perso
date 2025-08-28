@@ -39,6 +39,6 @@ export function getRoutes() {
   return pages.map(page => ({
     path: page.path,
     name: page.name,
-    component: () => import(`../pages/${page.name}.vue`)
+    component: () => import(`../pages/${page.name}Page.vue`)
   }))
 }
