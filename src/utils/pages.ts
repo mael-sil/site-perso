@@ -23,6 +23,11 @@ export const pages: PageInfo[] = [
     title: 'Projets'
   },
   {
+    name: 'Experiences',
+    path: '/experiences',
+    title: 'Expériences'
+  },
+  {
     name: 'Contact',
     path: '/contact',
     title: 'Contact'
