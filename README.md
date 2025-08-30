@@ -1,6 +1,8 @@
-# 🚀 Site Personnel - Maël Silvestre-Siaz
+# 🚀 Site Personnel - Mael Silvestre-Siaz
 
 Un site web moderne et responsive développé avec Vue.js 3, TypeScript et Vite pour présenter mon portfolio, mes compétences et mes projets.
+
+Disponible a l'adresse [https://mael-sil.github.io](https://mael-sil.github.io) 
 
 ## ✨ Fonctionnalités
 
