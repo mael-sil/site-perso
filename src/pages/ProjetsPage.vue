@@ -19,7 +19,7 @@ const projects: Project[] = [
   {
     id: 'sudonano',
     title: 'SudoNano',
-    description: 'Projet en groupe de 4 réalisé dans le cadre du BUT. Développement d\'un jeu de sudoku multijoueur compétitif en temps réel, avec un système d\'attaque entre joueurs.',
+    description: 'Projet en groupe de 3 réalisé dans le cadre du BUT. Développement d\'un jeu de sudoku multijoueur compétitif en temps réel, avec un système d\'attaque entre joueurs.',
     period: 'Février 2025 - En cours',
     link: 'https://forge.univ-lyon1.fr/sudonano/sudonano',
     technologies: ['Vue.js', 'Node.js', 'Socket.io', 'JavaScript', 'HTML/CSS'],
