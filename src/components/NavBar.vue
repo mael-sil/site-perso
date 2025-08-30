@@ -146,7 +146,7 @@ onMounted(() => {
 .nav-item {
   position: relative;
   z-index: 2;
-  padding: 0.5rem 1.5rem;
+  padding: 0.5rem 1rem;
   border-radius: var(--border-radius);
   min-width: 120px;
   text-align: center;
