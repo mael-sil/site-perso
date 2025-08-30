@@ -112,6 +112,7 @@ const skillsData = {
               <li><strong>StillDev (2025, 3 mois) :</strong> Stage développeur fullstack - Vue.js, FastAPI, Docker</li>
               <li><strong>Freelance (Depuis 2025) :</strong> Développement web et applications notamment pour StillDev</li>
             </ul>
+            <router-link to="/experiences" class="btn btn-primary">Plus d'informations</router-link>
           </div>
         </div>
       </div>
@@ -142,6 +143,41 @@ const skillsData = {
 </template>
 
 <style scoped>
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.25rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.15s ease, filter 0.15s ease, background 0.15s ease;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+}
+
+.experience-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.experience-card h3, .experience-card p, .experience-card ul {
+  width: 100%;
+}
+
+.experience-card .btn {
+  max-width: 200px;
+  margin-top: 0.5rem;
+}
+
 .about-section {
   padding: 4rem 2rem;
   background-color: var(--background-color);
