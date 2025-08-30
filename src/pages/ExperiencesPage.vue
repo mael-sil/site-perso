@@ -22,7 +22,7 @@ const experiences: Experience[] = [
   {
     id: 'stillnetwork / StillDev',
     title: 'Stagiaire développeur fullstack Vue.js / Python',
-    company: 'Stillnetwork',
+    company: 'Stillnetwork / StillDev',
     period: 'Juin 2025 - Août 2025',
     duration: '3 mois',
     description: 'Stage de 12 semaines au cours duquel j\'ai contribué au développement d\'une plateforme web B2B avec Vue.js, FastAPI et découverte des pratiques DevOps (Docker, CI/CD, bases de données, etc).',
@@ -343,21 +343,6 @@ const experiences: Experience[] = [
   gap: 0.5rem;
 }
 
-.tag-primary {
-  background: rgba(255, 255, 255, 0.2);
-  color: var(--text-primary);
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  transition: all 0.3s ease;
-}
-
-.tag-primary:hover {
-  background: rgba(255, 255, 255, 0.3);
-  transform: translateY(-2px);
-}
 
 /* CTA Section */
 .cta-section {
